@@ -1,0 +1,231 @@
+* {
+  margin: 0px;
+  font-family: Helvetica;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+}
+
+.container-half-screen {
+  width: 50%;
+  height: 90vh;
+  margin: 30px;
+}
+
+.container-half-screen--film-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: url(./poster.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding: 10px; */
+}
+
+.container-half-screen--choose-seats {
+  background-color: rgb(241, 239, 239);
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choose-seats__header {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: yellow; */
+  height: 30px;
+  width: 100%;
+}
+
+.choose-seats__header-button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  margin: 10px;
+
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+}
+
+.choose-seats__header-button--back {
+  background-image: url(./back.png);
+}
+
+.choose-seats__header-button--filters {
+  background-image: url(./filters.png);
+}
+
+.choose-seats__seats-amount {
+  width: 100%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.choose-seats__main {
+  height: 330px;
+}
+
+.film-info__title {
+  font-size: 60px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.film-info__subtitle {
+  font-size: 20px;
+  width: 30%;
+  /* border-radius: 5px; */
+  color: white;
+  background-color: black;
+}
+
+.film-info__rate {
+  font-size: 40px;
+}
+
+.film-info__description {
+  font-size: 17px;
+
+  padding: 20px;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.choose-seats__hall-container {
+  display: grid;
+  grid-template-columns: repeat(10, 20px);
+  grid-template-rows: repeat(11, 20px);
+  grid-gap: 3px;
+}
+
+.choose-seats__image-screen {
+  width: 100%;
+  /* height: 50%; */
+}
+
+.choose-seats__hall {
+  display: flex;
+  justify-content: center;
+}
+
+.choose-seats__label {
+  /* display: block;
+    position: relative; */
+  cursor: pointer;
+}
+
+.choose-seats__input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  /* opacity: 0;
+    height: 0;
+    width: 0; */
+  cursor: pointer;
+}
+
+.choose-seats__span {
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+
+  background-color: #eee;
+}
+
+.choose-seats__label:hover > .choose-seats__span {
+  background-color: rgb(130, 12, 240);
+}
+
+.choose-seats__input:checked + .choose-seats__span {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(130, 12, 240, 0.7); */
+}
+
+.choose-seats__footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+
+  /* padding: 10px 0px; */
+
+  /* border: 1px solid black; */
+}
+
+.choose-seats__checkout-information {
+  background-color: rgba(77, 77, 77, 1);
+  color: white;
+  font-weight: 100;
+}
+
+.checkout-seats__checkout-button {
+  font-size: 15px;
+  font-weight: 100;
+
+  background-color: #820cf0;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.choose-seats__footer--container-half {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 50%;
+}
+
+@media screen and (max-width: 600px), (max-height: 500px) {
+  
+    .body {
+    flex-direction: column;
+    /* justify-content: start; */
+    /* height: 200vh; */
+    width: 100%;
+    height: auto;
+
+
+  }
+
+  .container-half-screen {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+
+  .choose-seats__main {
+      height: auto;
+  }
+
+  .choose-seats__hall {
+      height: auto;
+  }
+
+  .choose-seats__form {
+      height: auto;
+  }
+
+  .choose-seats__hall-container {
+      height: auto;
+  }
+
+  .container-half-screen--choose-seats {
+      justify-content: center;
+  }
+
+}
