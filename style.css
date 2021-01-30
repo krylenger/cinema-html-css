@@ -204,11 +204,11 @@
 
   .container-half-screen {
     width: 100%;
-    height: auto;
+    height: 100vh;
     margin: 0px;
   }
 
-  .choose-seats__main {
+  /* .choose-seats__main {
       height: auto;
   }
 
@@ -226,6 +226,6 @@
 
   .container-half-screen--choose-seats {
       justify-content: center;
-  }
+  } */
 
 }
