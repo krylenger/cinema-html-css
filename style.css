@@ -51,7 +51,6 @@
 .choose-seats__header-button {
   border: none;
   cursor: pointer;
-  outline: none;
 
   margin: 10px;
 
@@ -75,17 +74,12 @@
   justify-content: space-around;
 }
 
-.choose-seats__seats-amount-container {
-  width: 100%;
-  font-size: 25px;
-  display: flex;
-  justify-content: space-around;
-}
-
 .choose-seats__time-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
+
+
 
 .choose-seats__time {
   background-color: white;
@@ -95,13 +89,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 30px;
+  height: 25px;
+
+  font-size: 12px;
+
+  margin: 3px;
+
+  cursor: pointer;
 }
 
 .choose-seats__time--active {
   background-color: rgba(240, 12, 12, 0.7);
+  border: 1px solid rgba(240, 12, 12, 0.7);
   color: white;
-  border: none;
 }
+
+.choose-seats__time-weekday {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.choose-seats__time-time {
+  font-size: 12px;
+  font-weight: bold;
+}
+
 
 .choose-seats__form {
   height: 100%;
@@ -182,9 +196,28 @@
   width: 20px;
   border: 1px solid black;
   border-radius: 3px;
-
   background-color: #eee;
 
+}
+
+.choose-seats__span-legend {
+  height: 20px;
+  width: 60px;
+  font-size: 13px;
+  overflow-wrap: break-word;
+  position: relative;
+  text-align: center;
+  line-height: inherit;
+}
+
+.choose-seats__span-legend--selected {
+  background-color: rgba(77, 77, 77, 1);
+  color: white;
+}
+
+.choose-seats__span-legend--sold {
+  background-color:black;
+  color: white;
 }
 
 .choose-seats__span--disabled {
@@ -205,6 +238,12 @@
 .choose-seats__input:checked + .choose-seats__span {
   background-color: rgba(0, 0, 0, 0.5);
   /* background-color: rgba(130, 12, 240, 0.7); */
+}
+
+.choose-seats__hall-legend {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: yellow; */
 }
 
 
@@ -243,6 +282,9 @@
   /* align-items: center; */
   width: 50%;
 }
+
+
+
 
 @media screen and (max-width: 600px), (max-height: 500px) {
   .body {
