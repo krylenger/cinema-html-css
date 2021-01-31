@@ -23,7 +23,8 @@
         </p>
       </main>
     </div>
-    <div class="container-half-screen container-half-screen--choose-seats">
+    <form class='container-half-screen container-half-screen--grey' action="">
+    <div class="container-half-screen--choose-seats">
       <header class="choose-seats__header">
         <button
           class="choose-seats__header-button choose-seats__header-button--back"
@@ -33,19 +34,54 @@
           class="choose-seats__header-button choose-seats__header-button--filters"
         ></button>
       </header>
-      <section class="choose-seats__seats-amount">
-        <div class="choose-seats__seats-amount-container">
-          <h5 class="choose-seats__seats-amount-title">Chosen Seats :</h5>
-        </div>
-        <div class="choose-seats__seats-amount-container">
-          <p class="choose-seats__seats-amount-number">3 seats</p>
-        </div>
-      </section>
+      
       <main class="choose-seats__main">
+
+
+        <section class="choose-seats__time-container">
+            <div class="choose-seats__time">
+                <span class="choose-seats__time-weekday">Tue</span>
+                <span class="choose-seats__time-number">17</span>
+            </div>
+            <div class="choose-seats__time choose-seats__time--active">
+                <span class="choose-seats__time-weekday">Tue</span>
+                <span class="choose-seats__time-number">17</span>
+            </div>
+            <div class="choose-seats__time">
+                <span class="choose-seats__time-weekday">Tue</span>
+                <span class="choose-seats__time-number">17</span>
+            </div>
+            <div class="choose-seats__time">
+                <span class="choose-seats__time-weekday">Tue</span>
+                <span class="choose-seats__time-number">17</span>
+            </div>
+            <div class="choose-seats__time">
+                <span class="choose-seats__time-weekday">Tue</span>
+                <span class="choose-seats__time-number">17</span>
+            </div>
+            <div class="choose-seats__time">
+                <span class="choose-seats__time-weekday">Tue</span>
+                <span class="choose-seats__time-number">17</span>
+            </div>
+
+        </section>
+        <section class="choose-seats__time-container">
+            <div class="choose-seats__time">
+                <span class="choose-seats__time-time">21:30</span>
+                <span class="choose-seats__time-price">200$</span>
+            </div>
+            <div class="choose-seats__time choose-seats__time--active">
+                <span class="choose-seats__time-time">21:30</span>
+                <span class="choose-seats__time-price">200$</span>
+            </div>
+            <div class="choose-seats__time">
+                <span class="choose-seats__time-time">21:30</span>
+                <span class="choose-seats__time-price">200$</span>
+            </div>
+        </section>
         <img class="choose-seats__image-screen" src="screen.png" alt="screen" />
-        <section class="choose-seats__hall">
-          <form class="choose-seats-form" action="">
-            <div class="choose-seats__hall-container">
+        <section class="choose-seats__hall-container">
+            <div class="choose-seats__hall">
               <label class="choose-seats__label" for="seat1">
                 <input
                   class="choose-seats__input"
@@ -244,15 +280,15 @@
                 />
                 <span class="choose-seats__span"></span>
               </label>
-              <label class="choose-seats__label" for="seat23">
+              <label class="choose-seats__label choose-seats__label--disabled" for="seat23">
                 <input
-                  checked
+                  disabled
                   class="choose-seats__input"
                   type="checkbox"
                   name="seat"
                   id="seat23"
                 />
-                <span class="choose-seats__span"></span>
+                <span class="choose-seats__span choose-seats__span--disabled"></span>
               </label>
               <label class="choose-seats__label" for="seat24">
                 <input
@@ -1049,7 +1085,14 @@
                 <span class="choose-seats__span"></span>
               </label>
             </div>
-          </form>
+        </section>
+                <section class="choose-seats__seats-amount-container">
+            <div class="choose-seats__seats-amount">
+              <h5 class="choose-seats__seats-amount-title">Chosen Seats :</h5>
+            </div>
+            <div class="choose-seats__seats-amount">
+              <p class="choose-seats__seats-amount-number">3 seats</p>
+            </div>
         </section>
       </main>
       <footer class="choose-seats__footer">
@@ -1060,10 +1103,12 @@
         </section>
         <button
           class="checkout-seats__checkout-button choose-seats__footer--container-half"
+          type='submit'
         >
           CHECKOUT
         </button>
       </footer>
     </div>
+</form>
   </body>
 </html>
