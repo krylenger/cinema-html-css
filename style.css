@@ -134,7 +134,7 @@
   border: 1px solid rgba(240, 12, 12, 0.7);
 }
 
-.choose-section__time-container:focus-within{
+.choose-section__time-container:focus-within {
   border: 1px dashed rgba(77, 77, 77, 1);
 }
 
@@ -154,7 +154,7 @@
   margin: 0px 2px;
   border: 1px solid black;
   border-radius: 5px;
-  font-size: 12px; 
+  font-size: 12px;
   background-color: white;
 }
 
@@ -215,7 +215,7 @@
 }
 
 .choose-section__span-legend--sold {
-  background-color:black;
+  background-color: black;
   color: white;
 }
 
@@ -275,7 +275,8 @@
   cursor: pointer;
 }
 
-.checkout-seats__checkout-button:focus, .checkout-seats__checkout-button:hover {
+.checkout-seats__checkout-button:focus,
+.checkout-seats__checkout-button:hover {
   border: 2px solid rgba(77, 77, 77, 1);
   color: rgba(77, 77, 77, 1);
 }
