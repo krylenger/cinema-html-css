@@ -185,6 +185,7 @@
   -moz-appearance: none;
   -ms-appearance: none;
   -o-appearance: none;
+  opacity: 0;
   cursor: pointer;
 }
 
