@@ -182,6 +182,9 @@
   position: absolute;
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
   cursor: pointer;
 }
 
