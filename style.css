@@ -293,7 +293,7 @@
 }
 
 @media screen and (max-width: 666px), (max-height: 550px) {
-  .body {
+  .container {
     flex-direction: column;
     height: auto;
     width: 100%;
