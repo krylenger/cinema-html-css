@@ -51,18 +51,19 @@ const renderConfirmationTickets = (chosenSeatsArray, containerWhereRender) => {
   });
 };
 
-const renderCheckoutButtonInformation = (chosenSeatsState) => {
+const renderButtonInformation = (button, chosenSeatsState) => {
+  console.log(button, chosenSeatsState);
   let ticketWord = 'tickets';
   if (chosenSeatsState.length === 1) ticketWord = 'ticket';
-  checkoutButton.innerHTML = `Buy ${chosenSeatsState.length} ${ticketWord} for $${chosenSeatsState.length * 7}.00`;
+  button.innerHTML = `Buy ${chosenSeatsState.length} ${ticketWord} for $${chosenSeatsState.length * 7}.00`;
 };
 
 const render = (chosenSeatsState) => {
   renderConfirmationTickets(chosenSeatsState, ticketsContainer);
-  renderCheckoutButtonInformation(chosenSeatsState);
+  renderButtonInformation(checkoutButton, chosenSeatsState);
 };
 
-createModalConfirmationTemplate = () => `            <section class="choose-section__chosen-tickets choose-section__chosen-tickets--modal chosen-tickets__modal-wrapper" id="choose-section__chosen-tickets">
+createModalConfirmationTemplate = () => `<section class="choose-section__chosen-tickets choose-section__chosen-tickets--modal chosen-tickets__modal-wrapper" id="choose-section__chosen-tickets">
 <div class="chosen-tickets chosen-tickets__inner" id="chosen-tickets__inner">
   <div class="chosen-tickets__header">
     <span class="chosen-tickets__dot chosen-tickets__dot--main"></span>
@@ -71,7 +72,7 @@ createModalConfirmationTemplate = () => `            <section class="choose-sect
   <h3 class="choose-section__title">Please double check</h3>
   <div class="chosen-tickets__tickets-container chosen-tickets__tickets-container--modal" id="chosen-tickets__tickets-container--modal">
   </div>
-  <a class="checkout-seats__checkout-button" id="checkout-seats__checkout-button" type="submit">
+  <a class="checkout-seats__checkout-button" id="checkout-seats__checkout-button--modal" type="submit">
     Pay
   </a>
 </div>
@@ -92,6 +93,9 @@ const renderModalConfirmation = (template, chosenSeatsState) => {
 
   const buttonCloseModalConfirmation = document.getElementById('chosen-tickets__button--go-back');
   const modalWrapper = document.getElementById('modal-wrapper');
+  const checkoutButtonModal = document.getElementById('checkout-seats__checkout-button--modal');
+
+  renderButtonInformation(checkoutButtonModal, chosenSeatsState);
 
   buttonCloseModalConfirmation.addEventListener('click', () => {
     modalWrapper.remove();
@@ -117,3 +121,4 @@ const initApp = () => {
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
+
