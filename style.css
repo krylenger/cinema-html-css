@@ -107,14 +107,6 @@
   height: 100%;
 }
 
-.choose-section__chosen-tickets {
-  align-self: center;
-  width: 37%;
-  height: 70%;
-  border-radius: 10px;
-  background-color: white;
-}
-
 .chosen-tickets {
   display: flex;
   flex-direction: column;
@@ -122,6 +114,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.choose-section__chosen-tickets {
+  align-self: center;
+  width: 37%;
+  height: 70%;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .choose-section__chosen-tickets--modal {
@@ -415,8 +415,22 @@
     height: 100vh;
     width: 100%;
     margin: 0px;
-  }
-
-  
+  }  
 }
 
+@media screen and (max-width: 420px) {
+  .container-inner {
+    height: auto;
+  }
+  
+  .choose-section__main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choose-section__chosen-tickets {
+    width: 60%;
+    margin: 10px;
+    height: 300px;
+  }
+}
