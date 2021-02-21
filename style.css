@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url(./poster.jpg);
+  background: url(./assets/poster.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -84,11 +84,11 @@
 }
 
 .choose-section__header-button--back {
-  background-image: url(./back.png);
+  background-image: url(./assets/back.png);
 }
 
 .choose-section__header-button--filters {
-  background-image: url(./filters.png);
+  background-image: url(./assets/filters.png);
 }
 
 .choose-section__main {
@@ -428,9 +428,12 @@
     align-items: center;
   }
 
-  .choose-section__chosen-tickets {
+  /* .choose-section__chosen-tickets {
     width: 60%;
     margin: 10px;
     height: 300px;
+  } */
+  .chosen-tickets__inner {
+    width: 80%;
   }
 }
