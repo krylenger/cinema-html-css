@@ -436,15 +436,14 @@
   .choose-section__chosen-tickets {
     align-self: center;
     width: 37%;
-    height: 70%;
     border-radius: 10px;
     background-color: white;
     min-width: 60%;
     height: 300px;
+    margin: 10px 0px;
   }
 
   .chosen-tickets {
-    width: 90%;
     max-height: 300px;
     display: flex;
     flex-direction: column;
@@ -461,6 +460,7 @@
     z-index: 1;
     height: 100%;
     width: 100%;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     justify-items: center;
