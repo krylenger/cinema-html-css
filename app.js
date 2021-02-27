@@ -1,9 +1,9 @@
-const bodyContainer = document.getElementById('body-container');
-const hall = document.getElementById('choose-section__hall');
-const confirmationSection = document.getElementById('choose-section__chosen-tickets');
-const confirmationSectionInnerContainer = document.getElementById('chosen-tickets__inner');
-const ticketsContainer = document.getElementById('chosen-tickets__tickets-container');
-const checkoutButton = document.getElementById('checkout-seats__checkout-button');
+const bodyContainer = document.getElementById('body-container'),
+      hall = document.getElementById('choose-section__hall'),
+      confirmationSection = document.getElementById('choose-section__chosen-tickets'),
+      confirmationSectionInnerContainer = document.getElementById('chosen-tickets__inner'),
+      ticketsContainer = document.getElementById('chosen-tickets__tickets-container'),
+      checkoutButton = document.getElementById('checkout-seats__checkout-button');
 
 const state = {
   chosenSeats: [],
@@ -87,10 +87,10 @@ const render = (chosenSeatsState, containerWhereRenderTickets, buttonToRenderTot
 const renderModalConfirmation = (template, chosenSeatsState) => {
   createModalConfirmation(template);
 
-  const ticketsContainerModal = document.getElementById('chosen-tickets__tickets-container--modal');
-  const buttonCloseModalConfirmation = document.getElementById('chosen-tickets__button--go-back');
-  const modalWrapper = document.getElementById('modal-wrapper');
-  const checkoutButtonModal = document.getElementById('checkout-seats__checkout-button--modal');
+  const ticketsContainerModal = document.getElementById('chosen-tickets__tickets-container--modal'),
+        buttonCloseModalConfirmation = document.getElementById('chosen-tickets__button--go-back'),
+        modalWrapper = document.getElementById('modal-wrapper'),
+        checkoutButtonModal = document.getElementById('checkout-seats__checkout-button--modal');
 
   render(chosenSeatsState, ticketsContainerModal, checkoutButtonModal);
 
