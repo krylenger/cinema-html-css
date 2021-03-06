@@ -420,6 +420,7 @@
 }
 
 @media screen and (max-width: 420px) {
+  
   .container-inner {
     height: auto;
   }
@@ -431,6 +432,7 @@
     width: 100%;
     height: 30%;
     min-height: 83%;
+    
   }
 
   .choose-section__hall-legend {
@@ -445,6 +447,7 @@
     min-width: 60%;
     height: 300px;
     margin: 10px 0px;
+
   }
 
   .chosen-tickets {
